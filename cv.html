@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhibu Kaneka - CV</title>
+    <title>About Me - Muhibu Kaneka</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -25,6 +26,97 @@
             background-color: #f5f5f5;
             color: #333;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        #header {
+            width: 300px;
+            background: var(--dark);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        
+        #header .top {
+            padding: 2rem;
+        }
+        
+        #header .bottom {
+            padding: 2rem;
+        }
+        
+        #logo {
+            text-align: center;
+            margin-bottom: 10rem;
+        }
+        
+        #logo img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid var(--secondary);
+            margin-top: 0;
+        }
+        
+        #nav ul {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        #nav li {
+            margin-bottom: 1rem;
+        }
+        
+        #nav a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        #nav a:hover {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        #nav .icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: white;
+        }
+        
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .icons a:hover {
+            color: var(--secondary);
+            transform: scale(1.2);
+        }
+        
+        .container-wrapper {
+            margin-left: 300px;
+            flex: 1;
         }
         
         .container {
@@ -46,12 +138,14 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            color: white;
         }
         
         header .title {
             font-size: 1.2rem;
             font-weight: 300;
             opacity: 0.9;
+            color: white;
         }
         
         .profile {
@@ -207,7 +301,46 @@
             color: var(--secondary);
         }
         
+        #footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-left: 300px;
+        }
+        
+        .copyright {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .copyright a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
         @media (max-width: 768px) {
+            #header {
+                width: 100%;
+                position: relative;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            #header .top, #header .bottom {
+                width: 100%;
+            }
+            
+            .container-wrapper {
+                margin-left: 0;
+            }
+            
+            #footer {
+                margin-left: 0;
+            }
+            
             .main-content {
                 flex-direction: column;
             }
@@ -218,183 +351,229 @@
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>MUHIBU KANEKA</h1>
-            <div class="title">Ingénieur Géoinformatique</div>
-        </header>
-        
-        <div class="profile">
-            Avec plus de 4 ans d’expérience pratique en géoinformatique, incluant le traitement d’images satellites, le développement de cartographie interactive web et la gestion de bases de données spatiales, ainsi qu’une première expérience en test logiciel, je souhaite désormais approfondir mes compétences en assurance qualité logicielle et en pratiques DevOps.
-
+<body class="is-preload">
+    <!-- Header -->
+    <div id="header">
+        <div class="top">
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar60"><img src="https://github.com/geosdatz/geosdatz.github.io/blob/master/images/mhbof.png?raw=true" alt="Muhibu Kaneka"/></span>
+            </div>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" id="home-link"><span class="icon solid fa-home"></span>Home</a></li>
+                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user"></span>About Me</a></li>
+                    <li><a href="cv.html" id="cv-link" target="_blank"><span class="icon solid fa-file"></span>CV</a></li>
+                    <li><a href="blog.html" id="blog-link" target="_blank"><span class="icon solid fa-pencil-alt"></span>Blog</a></li>
+                    <li><a href="projects.html" id="projects-link" target="_blank"><span class="icon solid fa-cogs"></span>Projects</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <div class="main-content">
-            <div class="sidebar">
-                <div class="section">
-                    <h3 class="section-title">Contact</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>0783 513 354 / 0745 338 856</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>muhibu.kaneka@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>20 rue de Cuques, 13100 Aix-en-Provence</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-globe"></i>
-                            <a href="https://geosdatz.github.io" target="_blank">Portfolio</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Compétences</h3>
-                    <ul class="skills-list">
-                        <li>Analyse fonctionnelle</li>
-                        <li>Rédaction des cas de tests</li>
-                        <li>Suivi des anomalies</li>
-                        <li>Méthodologie agile</li>
-                        <li>Automatisation des tests</li>
-                        <li>Exécution des tests (régression/ non-régression)</li>
-                    </ul>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Langues</h3>
-                    <ul class="skills-list">
-                        <li>Anglais (Courant)</li>
-                        <li>Français (Courant)</li>
-                    </ul>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Centres d'intérêt</h3>
-                    <div class="interests-list">
-                        <div class="interest-item">
-                            <i class="fas fa-bicycle"></i>
-                            <span>Cyclisme</span>
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-running"></i>
-                            <span>Jogging</span>
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-om"></i>
-                            <span>Méditation</span>
-                        </div>
-                        <div class="interest-item">
-                            <i class="fas fa-film"></i>
-                            <span>Cinéma</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="main">
-                <div class="section">
-                    <h3 class="section-title">Expérience Professionnelle</h3>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Ingénieur QA</div>
-                        <div class="company">INARE, Aix-en-Provence</div>
-                        <div class="date">MAI 2024 - MAR 2025</div>
-                        <div class="job-description">
-                            <div class="job-context"><strong>Contexte :</strong> Tests de qualité des applications (cartographiques)</div>
-                            <div class="job-achievements">
-                                <strong>Réalisations :</strong>
-                                <ul>
-                                    <li>Conception des cas de test dans Jira</li>
-                                    <li>Exécution des tests avec Xray</li>
-                                    <li>Réalisation des tests d'intégration, tests E2E, et tests d'acceptation</li>
-                                    <li>Reporting et suivi d'anomalies dans Jira</li>
-                                    <li>Automatisation des tests</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <div class="job-title">Ingénieur Géoinformatique</div>
-                        <div class="company">INRAE, Aix-en-Provence</div>
-                        <div class="date">MAR 2021 - MAR 2025</div>
-                        <div class="job-description">
-                            <div class="job-context"><strong>Contexte :</strong> Développement d'une chaîne automatisée pour le traitement des images satellites et développement d'une application de cartographie web interactive.</div>
-                            <div class="job-achievements">
-                                <strong>Réalisations :</strong>
-                                <ul>
-                                    <li>Développement de scripts python pour les traitements automatisés</li>
-                                    <li>Développement d'une application de cartographie Web</li>
-                                    <li>Programmation et intégration de fonctionnalités géospatiales</li>
-                                    <li>Conception et implémentation d'une base de données</li>
-                                    <li>Rédaction des documents techniques et du manuel d'utilisation</li>
-                                    <li>Réalisation des tests unitaires</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Formation</h3>
-                    
-                    <div class="education-item">
-                        <div class="degree">Master en Gestion des risques environnementaux</div>
-                        <div class="university">Université Côte d'Azur, France</div>
-                        <div class="date">2019 - 2021</div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="degree">Diplôme en Géoscience</div>
-                        <div class="university">Université de Tlemcen, Algérie</div>
-                        <div class="date">2012 - 2015</div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Certifications</h3>
-                    <ul class="skills-list">
-                        <li>Leadership et gestion des hommes: Excellencia training center</li>
-                        <li>Négociation et gestion des conflits: Excellencia training center</li>
-                        <li>Gestion de projet: LAMABE</li>
-                    </ul>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">Logiciels et Outils</h3>
-                    <div class="tools-list">
-                        <div class="tool-item">Jira</div>
-                        <div class="tool-item">Xray</div>
-                        <div class="tool-item">Selenium</div>
-                        <div class="tool-item">TestNG</div>
-                        <div class="tool-item">HP ALM</div>
-                        <div class="tool-item">Agile</div>
-                        <div class="tool-item">Scrum</div>
-                        <div class="tool-item">MySQL</div>
-                        <div class="tool-item">PostgreSQL</div>
-                        <div class="tool-item">Windows</div>
-                        <div class="tool-item">Linux</div>
-                        <div class="tool-item">Python</div>
-                        <div class="tool-item">SQL</div>
-                        <div class="tool-item">HTML</div>
-                        <div class="tool-item">CSS</div>
-                        <div class="tool-item">JavaScript</div>
-                        <div class="tool-item">Git</div>
-                        <div class="tool-item">Django</div>
-                    </div>
-                </div>
-            </div>
+        <div class="bottom">
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://linkedin.com/in/muhibu-kaneka" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/geosdatz?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="mailto:your-custom-email@example.com" class="icon solid fa-envelope"><span class="label">Send email</span></a></li>
+            </ul>
         </div>
     </div>
+
+    <div class="container-wrapper">
+        <div class="container">
+            <header>
+                <h1>MUHIBU KANEKA</h1>
+                <div class="title">Ingénieur Géoinformatique</div>
+            </header>
+            
+            <div class="profile">
+                Avec plus de 4 ans d'expérience pratique en géoinformatique, incluant le traitement d'images satellites, le développement de cartographie interactive web et la gestion de bases de données spatiales, ainsi qu'une première expérience en test logiciel, je souhaite désormais approfondir mes compétences en assurance qualité logicielle et en pratiques DevOps.
+            </div>
+            
+            <div class="main-content">
+                <div class="sidebar">
+                    <div class="section">
+                        <h3 class="section-title">Contact</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>0783 513 354 / 0745 338 856</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>muhibu.kaneka@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>20 rue de Cuques, 13100 Aix-en-Provence</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <a href="https://geosdatz.github.io" target="_blank">Portfolio</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin"></i>
+                                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Compétences</h3>
+                        <ul class="skills-list">
+                            <li>Analyse fonctionnelle</li>
+                            <li>Rédaction des cas de tests</li>
+                            <li>Suivi des anomalies</li>
+                            <li>Méthodologie agile</li>
+                            <li>Automatisation des tests</li>
+                            <li>Exécution des tests (régression/ non-régression)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Langues</h3>
+                        <ul class="skills-list">
+                            <li>Anglais (Courant)</li>
+                            <li>Français (Courant)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Centres d'intérêt</h3>
+                        <div class="interests-list">
+                            <div class="interest-item">
+                                <i class="fas fa-bicycle"></i>
+                                <span>Cyclisme</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-running"></i>
+                                <span>Jogging</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-om"></i>
+                                <span>Méditation</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-film"></i>
+                                <span>Cinéma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="main">
+                    <div class="section">
+                        <h3 class="section-title">Expérience Professionnelle</h3>
+                        
+                        <div class="experience-item">
+                            <div class="job-title">Ingénieur QA</div>
+                            <div class="company">INARE, Aix-en-Provence</div>
+                            <div class="date">MAI 2024 - MAR 2025</div>
+                            <div class="job-description">
+                                <div class="job-context"><strong>Contexte :</strong> Tests de qualité des applications (cartographiques)</div>
+                                <div class="job-achievements">
+                                    <strong>Réalisations :</strong>
+                                    <ul>
+                                        <li>Conception des cas de test dans Jira</li>
+                                        <li>Exécution des tests avec Xray</li>
+                                        <li>Réalisation des tests d'intégration, tests E2E, et tests d'acceptation</li>
+                                        <li>Reporting et suivi d'anomalies dans Jira</li>
+                                        <li>Automatisation des tests</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="job-title">Ingénieur Géoinformatique</div>
+                            <div class="company">INRAE, Aix-en-Provence</div>
+                            <div class="date">MAR 2021 - MAR 2025</div>
+                            <div class="job-description">
+                                <div class="job-context"><strong>Contexte :</strong> Développement d'une chaîne automatisée pour le traitement des images satellites et développement d'une application de cartographie web interactive.</div>
+                                <div class="job-achievements">
+                                    <strong>Réalisations :</strong>
+                                    <ul>
+                                        <li>Développement de scripts python pour les traitements automatisés</li>
+                                        <li>Développement d'une application de cartographie Web</li>
+                                        <li>Programmation et intégration de fonctionnalités géospatiales</li>
+                                        <li>Conception et implémentation d'une base de données</li>
+                                        <li>Rédaction des documents techniques et du manuel d'utilisation</li>
+                                        <li>Réalisation des tests unitaires</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Formation</h3>
+                        
+                        <div class="education-item">
+                            <div class="degree">Master en Gestion des risques environnementaux</div>
+                            <div class="university">Université Côte d'Azur, France</div>
+                            <div class="date">2019 - 2021</div>
+                        </div>
+                        
+                        <div class="education-item">
+                            <div class="degree">Diplôme en Géoscience</div>
+                            <div class="university">Université de Tlemcen, Algérie</div>
+                            <div class="date">2012 - 2015</div>
+                        </div>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Certifications</h3>
+                        <ul class="skills-list">
+                            <li>Leadership et gestion des hommes: Excellencia training center</li>
+                            <li>Négociation et gestion des conflits: Excellencia training center</li>
+                            <li>Gestion de projet: LAMABE</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="section">
+                        <h3 class="section-title">Logiciels et Outils</h3>
+                        <div class="tools-list">
+                            <div class="tool-item">Jira</div>
+                            <div class="tool-item">Xray</div>
+                            <div class="tool-item">Selenium</div>
+                            <div class="tool-item">TestNG</div>
+                            <div class="tool-item">HP ALM</div>
+                            <div class="tool-item">Agile</div>
+                            <div class="tool-item">Scrum</div>
+                            <div class="tool-item">MySQL</div>
+                            <div class="tool-item">PostgreSQL</div>
+                            <div class="tool-item">Windows</div>
+                            <div class="tool-item">Linux</div>
+                            <div class="tool-item">Python</div>
+                            <div class="tool-item">SQL</div>
+                            <div class="tool-item">HTML</div>
+                            <div class="tool-item">CSS</div>
+                            <div class="tool-item">JavaScript</div>
+                            <div class="tool-item">Git</div>
+                            <div class="tool-item">Django</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Muhibu Kaneka. All rights reserved.</li>
+                <li><a href="http://html5up.net">Geodatz</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
