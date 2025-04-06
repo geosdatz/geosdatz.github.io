@@ -5,6 +5,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Add this style to highlight the about section and fade others */
+        body.is-preload #main > section:not(.three) {
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        
+        body.is-preload #main > section.three {
+            opacity: 1;
+            background-color: rgba(0,0,0,0.05); /* Light highlight */
+            border-left: 4px solid #4CAF50; /* Green accent border */
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Highlight the about link in navigation */
+        #about-link {
+            color: #4CAF50 !important;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="is-preload">
     <!-- Header -->
@@ -17,24 +38,22 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li><a href="index.html" id="home-link"><span class="icon solid fa-home"style="font-size:24px">Home</span></a></li>
-                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user"style="font-size:24px">About Me</span></a></li>
-                    <li><a href="cv.html" id="cv-link"target="_blank"><span class="icon solid fa-file"style="font-size:24px">CV</span></a></li>
-                    <li><a href="blog.html" id="blog-link"target="_blank"><span class="icon solid fa-pencil-alt"style="font-size:24px">Blog</span></a></li>
-					<li><a href="projects.html" id="projects-link"target="_blank"><span class="icon solid fa-cogs"style="font-size:24px">Projects</span></a></li>
+                    <li><a href="index.html" id="home-link"><span class="icon solid fa-home" style="font-size:24px">Home</span></a></li>
+                    <li><a href="about.html" id="about-link" class="active"><span class="icon solid fa-user" style="font-size:24px">About Me</span></a></li>
+                    <li><a href="cv.html" id="cv-link"><span class="icon solid fa-file" style="font-size:24px">CV</span></a></li>
+                    <li><a href="blog.html" id="blog-link" target="_blank"><span class="icon solid fa-pencil-alt" style="font-size:24px">Blog</span></a></li>
+                    <li><a href="projects.html" id="projects-link" target="_blank"><span class="icon solid fa-cogs" style="font-size:24px">Projects</span></a></li>
                 </ul>
             </nav>
         </div>
         <div class="bottom">
-
-			<!-- Social Icons -->
-				<ul class="icons">
-					<li><a href="https://linkedin.com/in/muhibu-kaneka" target="_blank" class="icon brands fa-linkedin"style="font-size:24px"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/geosdatz?tab=repositories" target="_blank" class="icon brands fa-github"style="font-size:24px"><span class="label">Github</span></a></li>
-					<li><a href="mailto:your-custom-email@example.com" class="icon solid fa-envelope"style="font-size:24px"><span class="label">Send email</span></a></li>
-				</ul>
-		
-		</div>
+            <!-- Social Icons -->
+            <ul class="icons">
+                <li><a href="https://linkedin.com/in/muhibu-kaneka" target="_blank" class="icon brands fa-linkedin" style="font-size:24px"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/geosdatz?tab=repositories" target="_blank" class="icon brands fa-github" style="font-size:24px"><span class="label">Github</span></a></li>
+                <li><a href="mailto:your-custom-email@example.com" class="icon solid fa-envelope" style="font-size:24px"><span class="label">Send email</span></a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Main -->
@@ -66,5 +85,16 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+        // Ensure the about section is highlighted when page loads
+        $(document).ready(function() {
+            // Add active class to about link
+            $('#about-link').addClass('active');
+            
+            // If there are other sections, fade them out
+            $('#main > section:not(.three)').css('opacity', '0.3');
+        });
+    </script>
 </body>
 </html>
