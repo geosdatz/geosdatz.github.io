@@ -1,62 +1,123 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+        }
+        .project-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-content {
+            padding: 15px;
+        }
+        .project-title {
+            margin-top: 0;
+            color: #333;
+        }
+        .project-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Projects Section -->
+    <section id="projects">
+        <header>
+            <h2>My Projects</h2>
+            <p class="intro-text">Explore my collection of photography projects that showcase different aspects of Tanzania's landscapes, urban development, and environmental challenges.</p>
+        </header>
 
-<html>
-<body class="is-preload">
-				<!-- project-->
-    <section id="project" class="two">
-        <div class="container">
-
-            <header>
-                <h2>Projects</h2>
-            </header>
-
-            <p>I would like to invite you to explore some of the events through pictures.</p>
-
-            <div class="row">
-                <div class="col-4 col-12-mobile">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/KMJ.jpg" alt="" /></a>
-                        <header>
-                            <h3>The beauty of the country</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/tz1.jpg" alt="" /></a>
-                        <header>
-                            <h3>Aerial view of Dar-es-Salaam city</h3>
-                        </header>
-                    </article>
-                </div>
-                <div class="col-4 col-12-mobile">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/TZ3.jpg" alt="" /></a>
-                        <header>
-                            <h3>Mafia Island</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/TZ4.jpg" alt="" /></a>
-                        <header>
-                            <h3>Houses drowned by floods</h3>
-                        </header>
-                    </article>
-                </div>
-                <div class="col-4 col-12-mobile">
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/TZ5.jpg" alt="" /></a>
-                        <header>
-                            <h3>A very common flood problematic area</h3>
-                        </header>
-                    </article>
-                    <article class="item">
-                        <a href="#" class="image fit"><img src="images/TZ6.jpg" alt="" /></a>
-                        <header>
-                            <h3>Artisanal mining, very frightening act</h3>
-                        </header>
-                    </article>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="images/KMJ.jpg" alt="Tanzanian landscape" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">The Beauty of Tanzania</h3>
+                    <p class="project-description">This photograph captures the stunning natural beauty of Tanzania's countryside, showcasing its lush vegetation and vibrant colors that make it one of Africa's most visually striking destinations.</p>
                 </div>
             </div>
 
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="images/tz1.jpg" alt="Aerial view of Dar-es-Salaam" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Dar-es-Salaam from Above</h3>
+                    <p class="project-description">An aerial perspective of Tanzania's largest city, highlighting its urban expansion, coastal location, and the contrast between modern development and traditional neighborhoods.</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="images/TZ3.jpg" alt="Mafia Island" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Mafia Island Paradise</h3>
+                    <p class="project-description">This image showcases the pristine beaches and crystal-clear waters of Mafia Island, part of Tanzania's marine park system and a hidden gem for eco-tourism and diving enthusiasts.</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="images/TZ4.jpg" alt="Flooded houses" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Flood Impact on Communities</h3>
+                    <p class="project-description">A powerful image documenting the effects of seasonal flooding on residential areas, illustrating the challenges faced by communities in flood-prone regions of Tanzania.</p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card">
+                <img src="images/TZ5.jpg" alt="Flood problematic area" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Chronic Flood Zones</h3>
+                    <p class="project-description">This photograph highlights areas that experience regular flooding, raising awareness about the need for better urban planning and flood mitigation strategies in vulnerable regions.</p>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card">
+                <img src="images/TZ6.jpg" alt="Artisanal mining" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Artisanal Mining Concerns</h3>
+                    <p class="project-description">Documenting the dangerous practice of small-scale mining operations, this image brings attention to the environmental and safety issues associated with unregulated mining activities.</p>
+                </div>
+            </div>
         </div>
     </section>
 </body>

@@ -1,579 +1,377 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <title>About Me - Muhibu Kaneka</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhibu Kaneka - Geospatial Analyst</title>
     <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --accent: #e74c3c;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         body {
-            background-color: #f5f5f5;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        
-        #header {
-            width: 300px;
-            background: var(--dark);
-            color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            z-index: 1000;
-        }
-        
-        #header .top {
-            padding: 2rem;
-        }
-        
-        #header .bottom {
-            padding: 2rem;
-        }
-        
-        #logo {
-            text-align: center;
-            margin-bottom: 10rem;
-        }
-        
-        #logo img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 5px solid var(--secondary);
-            margin-top: 0;
-        }
-        
-        #nav ul {
-            list-style: none;
-            margin-top: 2rem;
-        }
-        
-        #nav li {
-            margin-bottom: 1rem;
-        }
-        
-        #nav a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            padding: 0.5rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        #nav a:hover {
-            background-color: var(--secondary);
-            color: white;
-        }
-        
-        #nav .icon {
-            margin-right: 10px;
-            font-size: 1.2rem;
-            color: white;
-        }
-        
-        .icons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .icons a {
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .icons a:hover {
-            color: var(--secondary);
-            transform: scale(1.2);
-        }
-        
-        .container-wrapper {
-            margin-left: 300px;
-            flex: 1;
-        }
-        
-        .container {
+            color: #333;
             max-width: 900px;
-            margin: 2rem auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #f9f9f9;
         }
         
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 2rem;
+        .cv-container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 3px;
             text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-        
-        header .title {
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
-            color: white;
-        }
-        
-        .profile {
-            padding: 1.5rem 2rem;
-            background: var(--light);
-            font-style: italic;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .sidebar {
-            flex: 1;
-            min-width: 250px;
-            background: var(--dark);
-            color: white;
-            padding: 2rem;
-        }
-        
-        .main {
-            flex: 2;
-            min-width: 300px;
-            padding: 2rem;
-        }
-        
-        .section {
-            margin-bottom: 2rem;
-        }
-        
-        .section-title {
-            color: var(--secondary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: #2c3e50;
             text-transform: uppercase;
         }
         
-        .contact-info {
-            margin-bottom: 1.5rem;
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 1.5em;
+            text-transform: uppercase;
         }
         
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
+        h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+            font-size: 1.2em;
         }
         
-        .contact-item i {
-            margin-right: 10px;
-            color: var(--secondary);
-            width: 20px;
+        .subtitle {
             text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #3498db;
+            font-size: 1.2em;
+            letter-spacing: 1px;
         }
         
-        .contact-item a {
-            color: white;
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .contact-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .job:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            align-items: baseline;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        
+        .job-date {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .skills-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        ul {
+            padding-left: 25px;
+            margin-top: 5px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .context {
+            font-style: italic;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .duties {
+            margin-left: 5px;
+        }
+        
+        .separator {
+            border-top: 2px solid #3498db;
+            margin: 20px 0;
+            opacity: 0.3;
+        }
+        
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+        
+        a {
+            color: #3498db;
             text-decoration: none;
-            transition: color 0.3s;
         }
         
-        .contact-item a:hover {
-            color: var(--secondary);
+        a:hover {
             text-decoration: underline;
         }
         
-        .skills-list {
-            list-style-type: none;
-        }
-        
-        .skills-list li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .skills-list li:before {
-            content: "•";
-            color: var(--secondary);
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
-        }
-        
-        .experience-item, .education-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .job-title, .degree {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: var(--primary);
-        }
-        
-        .company, .university {
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .date {
-            color: #777;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .job-description {
-            margin-top: 0.5rem;
-        }
-        
-        .job-context, .job-achievements {
-            margin-bottom: 0.5rem;
-        }
-        
-        .job-achievements ul {
-            list-style-position: inside;
-            padding-left: 1rem;
-        }
-        
-        .job-achievements li {
-            margin-bottom: 0.3rem;
-        }
-        
-        .tools-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .tool-item {
-            background: var(--light);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-        
-        .interests-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .interest-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .interest-item i {
-            margin-right: 5px;
-            color: var(--secondary);
-        }
-        
-        #footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-left: 300px;
-        }
-        
-        .copyright {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .copyright a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-        
         @media (max-width: 768px) {
-            #header {
-                width: 100%;
-                position: relative;
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            
-            #header .top, #header .bottom {
-                width: 100%;
-            }
-            
-            .container-wrapper {
-                margin-left: 0;
-            }
-            
-            #footer {
-                margin-left: 0;
-            }
-            
-            .main-content {
+            .contact-info, .two-column {
                 flex-direction: column;
+                gap: 15px;
             }
             
-            .sidebar {
-                order: 2;
+            .column, .contact-section {
+                min-width: 100%;
+            }
+            
+            body {
+                padding: 15px;
+            }
+            
+            .cv-container {
+                padding: 20px;
             }
         }
     </style>
 </head>
-<body class="is-preload">
-    <!-- Header -->
-    <div id="header">
-        <div class="top">
-            <!-- Logo -->
-            <div id="logo">
-                <span class="image avatar60"><img src="https://github.com/geosdatz/geosdatz.github.io/blob/master/images/mhbof.png?raw=true" alt="Muhibu Kaneka"/></span>
-            </div>
-            <!-- Nav -->
-            <nav id="nav">
+<body>
+    <div class="cv-container">
+        <h1>MUHIBU KANEKA</h1>
+        <div class="subtitle">Geospatial Analyst & Developer</div>
+        
+        <div class="separator"></div>
+        
+        <h2>PERSONAL PROFILE</h2>
+        <p>Geospatial Analyst and Developer with a proven experience in developing and automating systems for mapping, analyzing, and managing geospatial data. Skilled at integrating diverse datasets, including geological, environmental, and ecological data, to support spatial analysis and sustainable land and risks management. Also, proficient in designing and implementing interactive web mapping applications and automating geospatial processes using Python scripting as well as database management. Strong ability to collaborate across multidisciplinary teams, communicate technical concepts effectively in mining, ecological monitoring, natural risks projects.</p>
+        
+        <div class="contact-info">
+            <div class="contact-section">
+                <h3>CONTACT</h3>
                 <ul>
-                    <li><a href="index.html" id="home-link"><span class="icon solid fa-home"></span>Home</a></li>
-                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user"></span>About Me</a></li>
-                    <li><a href="cv.html" id="cv-link"><span class="icon solid fa-file"></span>CV</a></li>
-                    <li><a href="blog.html" id="blog-link" target="_blank"><span class="icon solid fa-pencil-alt"></span>Blog</a></li>
-                    <li><a href="projects.html" id="projects-link" target="_blank"><span class="icon solid fa-cogs"></span>Projects</a></li>
+                    <li>20 rue de Cuques,</li>
+                    <li>13100 Aix-en-Provence, France</li>
+                    <li>+33 783 513 354</li>
+                    <li>muhibu.kaneka@gmail.com</li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Portfolio</a></li>
                 </ul>
-            </nav>
-        </div>
-        <div class="bottom">
-            <!-- Social Icons -->
-            <ul class="icons">
-                <li><a href="https://linkedin.com/in/muhibu-kaneka" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-                <li><a href="https://github.com/geosdatz?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                <li><a href="mailto:your-custom-email@example.com" class="icon solid fa-envelope"><span class="label">Send email</span></a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container-wrapper">
-        <div class="container">
-            <header>
-                <h1>MUHIBU KANEKA</h1>
-                <div class="title">Ingénieur Géoinformatique</div>
-            </header>
-            
-            <div class="profile">
-                Avec plus de 4 ans d'expérience pratique en géoinformatique, incluant le traitement d'images satellites, le développement de cartographie interactive web et la gestion de bases de données spatiales, ainsi qu'une première expérience en test logiciel, je souhaite désormais approfondir mes compétences en assurance qualité logicielle et en pratiques DevOps.
             </div>
             
-            <div class="main-content">
-                <div class="sidebar">
-                    <div class="section">
-                        <h3 class="section-title">Contact</h3>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>0783 513 354 / 0745 338 856</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>muhibu.kaneka@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>20 rue de Cuques, 13100 Aix-en-Provence</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-globe"></i>
-                                <a href="https://geosdatz.github.io" target="_blank">Portfolio</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-linkedin"></i>
-                                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Compétences</h3>
-                        <ul class="skills-list">
-                            <li>Analyse fonctionnelle</li>
-                            <li>Rédaction des cas de tests</li>
-                            <li>Suivi des anomalies</li>
-                            <li>Méthodologie agile</li>
-                            <li>Automatisation des tests</li>
-                            <li>Exécution des tests (régression/ non-régression)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Langues</h3>
-                        <ul class="skills-list">
-                            <li>Anglais (Courant)</li>
-                            <li>Français (Courant)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Centres d'intérêt</h3>
-                        <div class="interests-list">
-                            <div class="interest-item">
-                                <i class="fas fa-bicycle"></i>
-                                <span>Cyclisme</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-running"></i>
-                                <span>Jogging</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-om"></i>
-                                <span>Méditation</span>
-                            </div>
-                            <div class="interest-item">
-                                <i class="fas fa-film"></i>
-                                <span>Cinéma</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="contact-section">
+                <h3>SOFTWARE AND TOOLS</h3>
+                <ul>
+                    <li><strong>Programming</strong>: Python, SQL, HTML, CSS, JavaScript, Django framework, GdaI, Geopandas</li>
+                    <li><strong>GIS and RS</strong>: QGIS, ArcGIS, GEE, ENVI</li>
+                    <li><strong>Database</strong>: PostgreSQL/PostGIS</li>
+                    <li><strong>Webapp</strong>: Geoserver, OpenLayers, leaflet</li>
+                    <li><strong>Version control</strong>: Git</li>
+                    <li><strong>Methodology</strong>: Agile</li>
+                </ul>
+            </div>
+        </div>
+            
+        <div class="two-column">
+            <div class="column">
+                <h3>TECHNICAL SKILLS</h3>
+                <ul>
+                    <li>Geospatial analysis</li>
+                    <li>Research methodologies</li>
+                    <li>Strong analytical and problem-solving</li>
+                    <li>Effective communication and teamwork</li>
+                    <li>Natural resources and ecosystem protection</li>
+                    <li>Python for automation and data processing</li>
+                    <li>Programming</li>
+                </ul>
                 
-                <div class="main">
-                    <div class="section">
-                        <h3 class="section-title">Expérience Professionnelle</h3>
-                        
-                        <div class="experience-item">
-                            <div class="job-title">Ingénieur QA</div>
-                            <div class="company">INARE, Aix-en-Provence</div>
-                            <div class="date">MAI 2024 - MAR 2025</div>
-                            <div class="job-description">
-                                <div class="job-context"><strong>Contexte :</strong> Tests de qualité des applications (cartographiques)</div>
-                                <div class="job-achievements">
-                                    <strong>Réalisations :</strong>
-                                    <ul>
-                                        <li>Conception des cas de test dans Jira</li>
-                                        <li>Exécution des tests avec Xray</li>
-                                        <li>Réalisation des tests d'intégration, tests E2E, et tests d'acceptation</li>
-                                        <li>Reporting et suivi d'anomalies dans Jira</li>
-                                        <li>Automatisation des tests</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="experience-item">
-                            <div class="job-title">Ingénieur Géoinformatique</div>
-                            <div class="company">INRAE, Aix-en-Provence</div>
-                            <div class="date">MAR 2021 - MAR 2025</div>
-                            <div class="job-description">
-                                <div class="job-context"><strong>Contexte :</strong> Développement d'une chaîne automatisée pour le traitement des images satellites et développement d'une application de cartographie web interactive.</div>
-                                <div class="job-achievements">
-                                    <strong>Réalisations :</strong>
-                                    <ul>
-                                        <li>Développement de scripts python pour les traitements automatisés</li>
-                                        <li>Développement d'une application de cartographie Web</li>
-                                        <li>Programmation et intégration de fonctionnalités géospatiales</li>
-                                        <li>Conception et implémentation d'une base de données</li>
-                                        <li>Rédaction des documents techniques et du manuel d'utilisation</li>
-                                        <li>Réalisation des tests unitaires</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Formation</h3>
-                        
-                        <div class="education-item">
-                            <div class="degree">Master en Gestion des risques environnementaux</div>
-                            <div class="university">Université Côte d'Azur, France</div>
-                            <div class="date">2019 - 2021</div>
-                        </div>
-                        
-                        <div class="education-item">
-                            <div class="degree">Diplôme en Géoscience</div>
-                            <div class="university">Université de Tlemcen, Algérie</div>
-                            <div class="date">2012 - 2015</div>
-                        </div>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Certifications</h3>
-                        <ul class="skills-list">
-                            <li>Leadership et gestion des hommes: Excellencia training center</li>
-                            <li>Négociation et gestion des conflits: Excellencia training center</li>
-                            <li>Gestion de projet: LAMABE</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="section">
-                        <h3 class="section-title">Logiciels et Outils</h3>
-                        <div class="tools-list">
-                            <div class="tool-item">Jira</div>
-                            <div class="tool-item">Xray</div>
-                            <div class="tool-item">Selenium</div>
-                            <div class="tool-item">TestNG</div>
-                            <div class="tool-item">HP ALM</div>
-                            <div class="tool-item">Agile</div>
-                            <div class="tool-item">Scrum</div>
-                            <div class="tool-item">MySQL</div>
-                            <div class="tool-item">PostgreSQL</div>
-                            <div class="tool-item">Windows</div>
-                            <div class="tool-item">Linux</div>
-                            <div class="tool-item">Python</div>
-                            <div class="tool-item">SQL</div>
-                            <div class="tool-item">HTML</div>
-                            <div class="tool-item">CSS</div>
-                            <div class="tool-item">JavaScript</div>
-                            <div class="tool-item">Git</div>
-                            <div class="tool-item">Django</div>
-                        </div>
-                    </div>
-                </div>
+                <h3>SOFT SKILLS</h3>
+                <ul>
+                    <li>Team work</li>
+                    <li>Adaptable/flexible</li>
+                    <li>Persistent</li>
+                    <li>Quick learner</li>
+                </ul>
+            </div>
+            
+            <div class="column">
+                <h3>LANGUAGES</h3>
+                <ul>
+                    <li>Kiswahili: Native</li>
+                    <li>English: Fluent</li>
+                    <li>French: Fluent</li>
+                    <li>German: Beginner</li>
+                </ul>
+                
+                <h3>HOBBIES</h3>
+                <ul>
+                    <li>Cycling, jogging</li>
+                    <li>Meditation</li>
+                    <li>Safari</li>
+                </ul>
             </div>
         </div>
         
-        <!-- Footer -->
-        <div id="footer">
-            <ul class="copyright">
-                <li>&copy; Muhibu Kaneka. All rights reserved.</li>
-                <li><a href="http://html5up.net">Geodatz</a></li>
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Geospatial Analyst</span>
+                <span class="job-date">Oct 2021 - Present</span>
+            </div>
+            <div><strong>INRAE, Aix-en-Provence, France</strong></div>
+            <div class="context"><strong>Context:</strong> Developing an interactive web mapping application, and fire risks analysis.</div>
+            <div><strong>Main duties performed:</strong></div>
+            <ul class="duties">
+                <li>Developed a web mapping application using Django Framework and integration of geospatial functionalities.</li>
+                <li>Collaborated with stakeholders including insurance companies, government agencies, and local communities to improve risk management strategies and policies.</li>
+                <li>Analyzed spatial data including satellite imagery, topographic information for vulnerability and impacts assessment.</li>
+                <li>Designed, implemented and managed databases for spatial and tabular data</li>
+                <li>Unit testing, and drafted technical documentation and user manual.</li>
             </ul>
         </div>
-    </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Geospatial Analyst</span>
+                <span class="job-date">Mar - Sept 2021</span>
+            </div>
+            <div><strong>INRAE, Aix-en-Provence, France</strong></div>
+            <div class="context"><strong>Context:</strong> Developing an automated system to process and analyze satellite imagery for forest fire mapping.</div>
+            <div><strong>Main duties performed:</strong></div>
+            <ul class="duties">
+                <li>Developed Python scripts to automate fire risks mapping and vectorizing raster data and storing the results into a database, hence reducing manual labor by over 70%.</li>
+                <li>Manually satellite imagery processing and analysis to extract information for burn mapping and severity analysis.</li>
+                <li>Regularly update and maintain the geospatial database to ensure data integrity and accessibility.</li>
+                <li>Developed a python package for vectorizing raster data to boundaries, and store the results into a database (in a WKT format).</li>
+                <li>Conducted ground truthing activities to validate and enhance the accuracy of the data.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Remote Sensing Analyst, Trainee</span>
+                <span class="job-date">Mar 2020 - July 2020</span>
+            </div>
+            <div><strong>ESPACE (UMR 7300), Nice, France</strong></div>
+            <div class="context"><strong>Context:</strong> The analysis of runoff due to suburban development on the "Brague catchment" (southern France)</div>
+            <div><strong>Main duties performed:</strong></div>
+            <ul class="duties">
+                <li>Satellite imagery processing for creating land cover maps and produced the analysis</li>
+                <li>Conducted a comprehensive study based on the influence of suburban development to urban runoff within the catchment area.</li>
+                <li>Analyzed statistical data, and generating hydrological models encompassing runoff coefficients, precipitation, and infiltration.</li>
+                <li>Presented a meaningful interpretation of the assessment and recommended potential solutions.</li>
+            </ul>
+        </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Geologist, Trainee</span>
+                <span class="job-date">Feb 2019 - August 2019</span>
+            </div>
+            <div><strong>TPDC, Dar-es-Salaam, Tanzania</strong></div>
+            <div class="context"><strong>Context:</strong> Gravity prospection for structural studies in the southern Tanzania petroleum basins</div>
+            <div><strong>Main duties performed:</strong></div>
+            <ul class="duties">
+                <li>Gravity data acquisition, processing, and interpretation for structural analysis.</li>
+                <li>Geospatial data integration (gravity, satellite imagery, geological mapping).</li>
+                <li>Structural mapping, including faults, folds, and lineament identification and analysis.</li>
+                <li>Terrain and topographic analysis (DEM processing, slope, aspect studies).</li>
+                <li>Remote sensing analysis for geological and structural studies.</li>
+            </ul>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Geologist, Trainee</span>
+                <span class="job-date">August 2015 - May 2016</span>
+            </div>
+            <div><strong>Yapi Merkez, Dar-es-Salaam</strong></div>
+            <div class="context"><strong>Context:</strong> Mapping and assessment of natural hazards as well as vulnerability analysis, with a focus on flooding and landslides.</div>
+            <div><strong>Main duties performed:</strong></div>
+            <ul class="duties">
+                <li>Processed and interpreted satellite imagery and statistical data for vulnerability analysis.</li>
+                <li>Conducted vulnerability assessments and created local flood risk maps.</li>
+                <li>Preparation and processing of DEM for the analysis</li>
+                <li>Engaged in the mapping of natural hazards, database management, and the preparation of comprehensive technical reports.</li>
+            </ul>
+        </div>
+        
+        <h2>EDUCATION</h2>
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">MSc. Environmental Hazards and Risks Management</span>
+                <span class="job-date">2019-2021</span>
+            </div>
+            <div><strong>Côte d'Azur University, France</strong></div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">MSc. Georesources</span>
+                <span class="job-date">2016 - 2018</span>
+            </div>
+            <div><strong>Tiemcen University, Algeria</strong></div>
+        </div>
+        
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">BSc. Geoscience</span>
+                <span class="job-date">2012 - 2015</span>
+            </div>
+            <div><strong>Tiemcen University, Algeria</strong></div>
+        </div>
+        
+        <h2>CERTIFICATES AND AWARDS</h2>
+        <ul>
+            <li>Geospatial applications for disaster risk management | UNOOSA and CSSTEAP</li>
+            <li>Leadership and Conflict management | Excellence training center</li>
+            <li>Python for spatial analysis | Coursera</li>
+            <li>Project management | LAMAGE</li>
+            <li>French government scholarship | 2019</li>
+            <li>Algerian scholarship for African students | 2011</li>
+        </ul>
+    </div>
 </body>
 </html>
