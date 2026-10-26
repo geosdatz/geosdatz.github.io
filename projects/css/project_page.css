@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+  }
+  body, html{
+    /* overflow-y: scroll; */
+    margin:0;
+    height:100%
+    /* margin-right:10px */
+}
+  .nav{
+    top:0;
+    left:0;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(20, 20, 20),rgb(37, 37, 37));
+    height:100px
+  }
+  html{
+    background-color:#27333a;
+    /* height:fit-content;
+    min-width: fit-content; */
+  }
+  body{
+    background-color:#27333a;
+    height:fit-content;
+    font-size:1rem;
+    /* min-width: fit-content; */
+  }
+  /* Position the image container (needed to position the left and right arrows) */
+  .imageContainer {
+    margin: 0;
+    /* position: absolute;
+    top: 50%;
+    /* left: 30%;* */
+    /* transform: scale(0.5);  */
+    width:100%;
+    height:100%;
+    max-height:800px;
+    max-width:500px;
+    margin-top:150px;
+    margin-left:10%;
+    margin-right:10%;
+
+    
+  }
+  .imageContainer-large{
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    margin-bottom:50vh;
+    max-width: 100%;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222222;
+    padding: 2px 16px;
+    color: white;
+    height:50px auto;
+    display:flex;
+    justify-content: center;
+    font-size:clamp(0.5rem, 2vw, 2rem);
+  }
+  .row{
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    margin-right: -50%;
+}
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  .images{
+    width:100%;
+    display:flex;
+    align-items: center;
+    text-align: center;
+  }
+  .mySlides{
+    margin-top:50px
+  }
+
+
+
+
+  /* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: #f1f1f1;
+    font-size: 100px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index:1
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+    .close{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      color:#ffffff
+    }
+    
+  }
+  .project-text{
+    margin: 0;
+    position: relative;
+    width:800px;
+    height:1000px auto;
+    color:#bbb;
+    padding:25px;
+    max-height:800px;
+    max-width:1000px;
+    min-width:390px;
+    margin-top:170px;
+    margin-right:5%;
+    font-size: 20px;
+   
+    /* background-color:rgba(73, 84, 90, 0.274); */
+
+    /* font-size:1vw; */
+    text-align: justify;
+    /* text-align:center */
+  }
+  .indent{
+    padding-left: 2em;
+    margin-right:20px
+  }
+  /* make the text responsive */
+  @media screen and (max-width:800px) {
+    .imageContainer-large{
+        display:block
+    }
+    
+    .imageContainer{
+      width:80%;
+        height:70%
+    }
+    .project-text{
+      width:80%;
+        height:70%;
+        margin:0
+      
+  }
+}
+
+
+
+/* HOVER */
+  /* Tooltip container */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .logos{
+    padding:10px 5px;
+    transition: 1s;
+    color:rgb(222, 226, 230);
+  }
+  .logos:hover{
+    background-color: #2f4c58;
+    color:rgb(166, 169, 172);
+    border-radius: 25px; 
+  }

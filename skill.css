@@ -1,0 +1,791 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* html, body {
+  background: #1a1a1a;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+  
+} */
+
+/* NEW SKILLS */
+
+.skill_col_1{
+  margin:0px;
+  /* margin-top:150px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: right; */
+  height:400px;
+  width:30%;
+  flex-wrap: wrap;
+  display:flex;
+  justify-content: center;
+}
+.skill_col_2{
+  margin:0px;
+  /* display: flex;
+  align-items: center;
+  justify-content: left; */
+  height:400px;
+  width:30%;
+  flex-wrap: wrap;
+  display:flex;
+  justify-content: center;
+
+}
+
+.skill_col_3{
+  margin:0px;
+  /* display: flex;
+  align-items: center;
+  justify-content: left; */
+  height:400px;
+  width:30%;
+  flex-wrap: wrap;
+  display:flex;
+  justify-content: center;
+
+}
+.coll{
+  width:100%;
+  text-align: center;
+  font-size:clamp(1rem, 5vw, 3rem);
+  color:rgb(206, 186, 238);
+  margin:20px 0px;
+  font-weight: bold;
+  /* background-color:rgba(73, 84, 90, 0.274); */
+  border-radius: 15px;
+  
+}
+.skill_col{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom:150px;
+
+}
+
+
+.skills-bar-container {
+  position: relative;
+  width: 100%;
+  min-width: 200px;
+  max-width: 280px;
+  margin: 0 auto;
+  list-style: none;
+  font-size:clamp(0.5rem, 1.5rem, 3rem);
+  background-color:rgba(73, 84, 90, 0.274);
+  border-radius: 20px;
+  padding:10px 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.skills-bar-container li {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.skills-bar-container li .progressbar-title {
+  color: #fff;
+}
+.skills-bar-container li .progressbar-title h3 {
+  display: inline-block;
+}
+.skills-bar-container li .progressbar-title .percent {
+  position: absolute;
+  right: 5px;
+  bottom:35%;
+  font-size:clamp(0.5rem, 5vw, 1.7rem);
+  font-family: "PT Sans", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  .percent {
+      display: none !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .bar-container {
+    display: none !important;
+}
+.skill_col{
+  font-size:15px;
+  
+}
+.skills-bar-container{
+  background-color: #1198ff00;
+  text-align: center
+}
+.expnote{
+  background-color:#1198ff00
+}
+.change{
+  background-color: #6a9ec5
+}
+;
+
+}
+
+
+@media screen and (max-width: 450px) {
+  .skill_col {
+    margin-bottom:0px
+}
+.expdes{
+  font-size: 1.5rem;
+}
+.card-text{
+  font-size:1.5rem
+};
+
+}
+
+@media screen and (max-width: 450px) {
+  .coll{
+    font-size:15px;
+    margin:0px 0px;
+    height:30px
+};
+}
+@media screen and (max-width: 450px) {
+  .skills-bar-container{
+    font-size:12px
+};
+}
+
+
+
+.skills-bar-container li .bar-container {
+  background: #555;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin-top: 5px;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+.skills-bar-container li .bar-container .progressbar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.skills-bar-container li .bar-container #progress-arcgis {
+  -webkit-animation-name: progress-arcgis;
+  animation-name: progress-arcgis;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.skills-bar-container li .bar-container #progress-qgis {
+  -webkit-animation-name: progress-qgis;
+  animation-name: progress-qgis;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.skills-bar-container li .bar-container #progress-R {
+  -webkit-animation-name: progress-R;
+  animation-name: progress-R;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.skills-bar-container li .bar-container #progress-python {
+  -webkit-animation-name: progress-python;
+  animation-name: progress-python;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.skills-bar-container li .bar-container #progress-SQL {
+  -webkit-animation-name: progress-SQL;
+  animation-name: progress-SQL;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.skills-bar-container li .bar-container #progress-html {
+  -webkit-animation-name: progress-html;
+  animation-name: progress-html;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.skills-bar-container li .bar-container #progress-javascript {
+  -webkit-animation-name: progress-javascript;
+  animation-name: progress-javascript;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.skills-bar-container li .bar-container #progress-openlayers {
+  -webkit-animation-name: progress-openlayers;
+  animation-name: progress-openlayers;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.skills-bar-container li .bar-container #progress-leaflet {
+  -webkit-animation-name: progress-leaflet;
+  animation-name: progress-leaflet;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+.skills-bar-container li .bar-container #progress-mapbox {
+  -webkit-animation-name: progress-mapbox;
+  animation-name: progress-mapbox;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.skills-bar-container li .bar-container #progress-geoserver {
+  -webkit-animation-name: progress-geoserver;
+  animation-name: progress-geoserver;
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
+}
+
+.skills-bar-container li .bar-container #progress-postgis {
+  -webkit-animation-name: progress-postgis;
+  animation-name: progress-postgis;
+  -webkit-animation-delay: 4.9s;
+  animation-delay:  4.9s;
+}
+.skills-bar-container li .bar-container #progress-creativity {
+  -webkit-animation-name: progress-creativity;
+  animation-name: progress-creativity;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.skills-bar-container li .bar-container #progress-motivation {
+  -webkit-animation-name: progress-motivation;
+  animation-name: progress-motivation;
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+.skills-bar-container li .bar-container #progress-vector {
+  -webkit-animation-name: progress-vector;
+  animation-name: progress-vector;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+.skills-bar-container li .bar-container #progress-dataset {
+  -webkit-animation-name: progress-dataset;
+  animation-name: progress-dataset;
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+.skills-bar-container li .bar-container #progress-detail {
+  -webkit-animation-name: progress-detail;
+  animation-name: progress-detail;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+.skills-bar-container li .bar-container #progress-problem {
+  -webkit-animation-name: progress-problem;
+  animation-name: progress-problem;
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
+}
+
+.progressred {
+  background-color: #c0392b;
+}
+
+.progressblue {
+  background-color: #1199ff;
+}
+
+.progresspurple {
+  background-color: #9b59b6;
+}
+
+.progressorange {
+  background-color: #ffa500;
+}
+
+.progressgreen {
+  background-color: #27ae60;
+}
+.progresspink{
+  background-color: pink;
+}
+.progressorangered{
+  background-color: orangered;
+}
+@-webkit-keyframes progress-arcgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-qgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-R {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-webkit-keyframes progress-SQL {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+@-webkit-keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@-webkit-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-openlayers {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-leaflet {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes progress-geoserver {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes progress-postgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes progress-mapbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 91%;
+  }
+}
+@-webkit-keyframes progress-creativity {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-motivation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes progress-vector {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes progress-dataset {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-detail {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes progress-problem {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-arcgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-qgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-R {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-moz-keyframes progress-SQL {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@-moz-keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+
+@-moz-keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-openlayers {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@-moz-keyframes progress-leaflet {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-geoserver {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-postgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes progress-mapbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 91%;
+  }
+}
+@-moz-keyframes progress-creativity {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-motivation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes progress-vector {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-moz-keyframes progress-dataset {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-detail {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes progress-problem {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-arcgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progress-qgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-R {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes progress-python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@keyframes progress-SQL {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+
+ 
+}
+@keyframes progress-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+
+ 
+}
+
+@keyframes progress-javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 92%;
+  }
+
+ 
+}
+@keyframes progress-openlayers {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 92%;
+  }
+
+ 
+}
+
+@keyframes progress-leaflet {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 91%;
+  }
+
+ 
+}
+
+@keyframes progress-mapbox {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 91%;
+  }
+}
+
+@keyframes progress-geoserver {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes progress-postgis {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes progress-creativity {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-motivation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progress-vector {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-dataset {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-detail {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-problem {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=skill.css.map */

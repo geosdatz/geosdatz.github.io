@@ -1,75 +1,803 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<!--     <title>Home - Muhibu Kaneka</title> -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skill.css">
+    <link rel="stylesheet" href="learnmorebtn.css">
+    <link rel="stylesheet" href="css/project_page.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <title>Muhibu Kaneka</title>
 </head>
-<body class="is-preload">
-    <!-- Header -->
-    <div id="header">
-        <div class="top">
-            <!-- Logo -->
-            <div id="logo">
-                <span class="image avatar60"><img src="https://github.com/geosdatz/geosdatz.github.io/blob/master/images/mhbof.png?raw=true" alt="Muhibu Kaneka"/></span>
-<!--                <h1 id="title">Muhibu Kaneka</h1>
-                <p>Geospatial Analyst and Developer</p> -->
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="#Home">
+                    <i class="fa fa-home"></i>
+                    Home
+                </a>
             </div>
-            <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html" id="home-link"><span class="icon solid fa-home"style="font-size:24px">Home</span></a></li>
-                    <li><a href="about.html" id="about-link"><span class="icon solid fa-user"style="font-size:24px">About Me</span></a></li>
-                    <li><a href="https://cvdesignr.com/p/694418a387659?hl=en_GB" id="cv-link" target="_blank" rel="noopener noreferrer"><span class="icon solid fa-file" style="font-size:24px">CV</span></a></li>
-                    <li><a href="blog.html" id="blog-link"target="_blank"><span class="icon solid fa-pencil-alt"style="font-size:24px">Blog</span></a></li>
-					<li><a href="projects.html" id="projects-link"><span class="icon solid fa-cogs"style="font-size:24px">Projects</span></a></li>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="#About-me">About me</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#work-experience">Work Experience</a></li>
+                    <li><a href="#Portfolio">Portfolio</a></li>
+                    <li><a href="https://cvdesignr.com/p/694418a387659?hl=en_GB" id="cv-link" target="_blank" rel="noopener noreferrer">CV</a></li>
+                    <li><a href="#Contacts">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
-		<div class="bottom">
-
-			<!-- Social Icons -->
-				<ul class="icons">
-					<li><a href="https://linkedin.com/in/muhibu-kaneka" target="_blank" class="icon brands fa-linkedin"style="font-size:24px"><span class="label">LinkedIn</span></a></li>
-					<li><a href="https://github.com/geosdatz?tab=repositories" target="_blank" class="icon brands fa-github"style="font-size:24px"><span class="label">Github</span></a></li>
-					<li><a href="mailto:your-custom-email@example.com" class="icon solid fa-envelope"style="font-size:24px"><span class="label">Send email</span></a></li>
-				</ul>
-		
-		</div>
-    </div>
-
-    <!-- Main -->
-    <div id="main">
-        <!-- Intro -->
-        <section id="top" class="one dark cover">
-            <div class="container">
-                <header>
-                    <h2 class="alt">Hello, <strong>My name is Muhibu!</strong> Welcome to my platform.</h2>
-                    <p>Here you will find my projects, blog posts, and more.</p>
-                </header>
-                <footer>
-                    <a href="geospatz.html" class="button scrolly"target="_blank">Discover Geospatz</a>
-                </footer>
             </div>
-        </section>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <div id="footer">
-        <ul class="copyright">
-            <li>&copy; Muhibu Kaneka. All rights reserved.</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-        </ul>
+    <!-- Hero Section: home background image -->
+    <section class="home" id="Home">
+        <div class="name">
+            <!-- <h1 class="box">Geo-Environmental specialist and Spatial Analyst</h1> -->
+        </div>
+        <!-- <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg> -->
+    </section>
+
+    <!-- About Me Section -->
+    <div id="About-me">
+        <p class="myP">About me</p>
+    </div>
+    <div class="photoback">
+        <img class="photo" src="images/avatar.jpg" alt="Profile photo">
+        <p class="myP">Muhibu Kaneka</p>
+    </div>
+    <div>
+        <p class="aboutMe">
+            I am an Environmental Geoscientist and spatial analyst with four years of experience in forest fire mapping, satellite 
+            image processing, and environmental risk assessment. Proven ability to develop 
+            automated workflows for satellite-based risk mapping and analysis, conduct field data validation, 
+            and apply statistical and spatial methods to natural hazards. Research interests focus on fire severity assessment, 
+            flood risk analysis, land use and land cover change, and broader topics related to climate change and natural hazards.
+        </p>
+    </div>
+
+<!-- SKILLS 92 261-->
+    <div id="Skills">
+        <p class="myP myP2">Skills</p>
+    </div>
+    <div class="skill_col">
+        <!-- Geospatial Analysis Tools -->
+        <div class="skill_col_1">
+            <p class="coll"> Geospatial Analysis tools</p>
+            <ul class="skills-bar-container">
+                <li>
+                    <div class="progressbar-title">
+                        <h3>ArcGIS pro</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressred" id="progress-arcgis"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>QGIS</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressblue" id="progress-qgis"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-python"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>R</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-R"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressgreen" id="progress-SQL"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Web Mapping Tools -->
+        <div class="skill_col_2">
+            <p class="coll">Web mapping tools</p>
+            <ul class="skills-bar-container">
+                <li>
+                    <div class="progressbar-title">
+                        <h3>JavaScript / HTML5 / CSS</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressred" id="progress-html"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>OpenLayers</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-openlayers"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Leaflet</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-leaflet"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>GeoServer</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorangered" id="progress-geoserver"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>PostgreSQL / PostGIS</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspink" id="progress-postgis"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Data Analysis Tools -->
+        <div class="skill_col_3">
+            <p class="coll">Data Analysis tools</p>
+            <ul class="skills-bar-container">
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Geopandas / Pandas</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressred" id="progress-creativity"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Power BI</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressblue" id="progress-motivation"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Excel</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-vector"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>SQL</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-dataset"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>PySpark</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressgreen" id="progress-detail"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    <!--   Soft Skills        -->     
+        <div class="skill_col_3">
+            <p class="coll">Soft skills</p>
+            <ul class="skills-bar-container">
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Communication</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressred" id="progress-creativity"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Problem Solving</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressblue" id="progress-motivation"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Project Management</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-vector"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Team work</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-dataset"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Negotiation</h3>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressgreen" id="progress-detail"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- End of Soft skills-->
+
+ 
+    <!-- Education -->
+
+    <div id="Education">
+        <p class="myP myP3">Education</p>
+    </div>
+
+    <div class="experiencecol">
+        <div class="exp eduexp">
+
+            <!-- Begin of Bachelor of Geoscience course -->
+            <p class="expbox">
+                <a href="https://vrp.univ-tlemcen.dz/fr" target="_blank" rel="noopener noreferrer">
+                    <img class="company_logo"
+                        title="The official site of Tlemcen University"
+                        src="images/tlemcen_univ.png"
+                        alt="Logo the University of Tlemcen">
+                </a><br>
+                <span class="exptitle schoolname">University of Tlemcen</span>
+                <span class="expnote"><br>
+                    <span style="font-weight: bold; color: rgba(234, 252, 156, 0.979); background-color: rgba(73, 84, 90, 0.274); 
+                    border-radius: 25px; padding: 10px 20px" class="deg">BSc. Geoscience</span><br>
+
+                    <strong style="color: rgba(55, 236, 239, 0.979);"> 2012 - 2015</strong><br>Tlemcen, Algeria<br>
+                </span><br>
+            </p>
+            <!-- END of Bachelor of Geoscience course -->
+
+            <!-- Begin of Master of Georesources course -->
+            <p class="expbox">
+                <a href="https://vrp.univ-tlemcen.dz/fr" target="_blank" rel="noopener noreferrer">
+                    <img class="company_logo"
+                        title="The official site of Tlemcen University"
+                        src="images/tlemcen_univ.png"
+                        alt="Logo the University of Tlemcen">
+                </a><br>
+                <span class="exptitle schoolname">University of Tlemcen</span>
+                <span class="expnote"><br>
+                    <span style="font-weight: bold; color: rgba(234, 252, 156, 0.979); background-color: rgba(73, 84, 90, 0.274); 
+                    text-align: center; border-radius: 25px; padding: 10px 20px" class="deg">MSc. Georesources</span><br>
+
+                    <strong style="color: rgba(55, 236, 239, 0.979);">2016 - 2018</strong><br> Tlemcen, Algeria<br>
+                </span><br>
+            </p>
+            <!-- END of Master of Georesources course -->
+
+            <!-- Begin of Master of Risks course -->
+            <p class="expbox">
+                <a href="https://univ-cotedazur.eu/msc/environmental-hazards-and-risks-management/" target="_blank" rel="noopener noreferrer">
+                    <img class="company_logo"
+                        title="The official site of Côte d'Azur university"
+                        src="images/nice_univ.jpg"
+                        alt="Logo the Côte d'Azur university">
+                </a><br>
+                <span class="exptitle schoolname">University of Côte d'Azur</span>
+                <span class="expnote"><br>
+                    <span style="font-weight: bold; color: rgba(234, 252, 156, 0.979); background-color: rgba(73, 84, 90, 0.274); 
+                    text-align: center; border-radius: 25px; padding: 10px 20px; display: inline-block; word-wrap: 
+                    break-word; max-width: 300px;" class="deg">MSc. Environmental Hazards and Risks Management</span><br>
+
+                    <strong style="color: rgba(55, 236, 239, 0.979);">2019 - 2021</strong><br>Nice, France<br>
+                </span>
+            </p>
+            <!-- END of Master of Risks course -->
+
+            <!-- Begin of M2i data analyst course -->
+            <p class="expbox">
+                <a href="https://www.m2iformation.fr/" target="_blank" rel="noopener noreferrer">
+                    <img class="company_logo"
+                        title="The official site of Côte d'Azur university"
+                        src="images/m2i.jpg"
+                        alt="Logo the Côte d'Azur university">
+                </a><br>
+                <span class="exptitle schoolname">M2i Training center</span>
+                <span class="expnote"><br>
+                    <span style="font-weight: bold; color: rgba(234, 252, 156, 0.979); background-color: rgba(73, 84, 90, 0.274); 
+                    text-align: center; border-radius: 25px; padding: 10px 20px; display: inline-block; word-wrap: 
+                    break-word; max-width: 300px;" class="deg">Certificate in Data Analytics</span><br>
+
+                    <strong style="color: rgba(55, 236, 239, 0.979);">Jun, 2025 - Sept, 2025</strong><br> Rouen,France<br>
+                </span>
+            </p>
+
+              <!-- END of M2i data analyst course -->
+        </div>
+    </div><br><br>
+    <!-- Education END -->
+
+    <!-- Work Experience Section -->
+
+<div id="work-experience">
+    <p class="myP myP3"> Work Experience </p>
+</div>
+
+<div class="experiencecol">
+
+    <div class="exp">
+        <div class="expbox">
+            <a href="https://www.inrae.fr/changement-climatique-risques/incendies-forets"
+               target="_blank" rel="noopener noreferrer">
+                <img class="company_logo" title="The official site of INRAE"
+                     src="images/inrae.png" alt="Company logo of INRAE">
+            </a><br>
+
+            <span class="exptitle">INRAE </span>
+            <span class="expnote"><br>
+                <strong style="color:rgba(234, 252, 156, 0.979)">
+                    Geospatial analyst
+                </strong><br>
+                oct, 2021 - current<br>
+                Aix-en-Provence, France
+            </span><br>
+        </div>
+
+        <p class="expdes">
+            • Designed and administered spatial and non-spatial databases (PostgreSQL/PostGIS), ensuring data integrity and consistency.<br>
+            • Extracted, cleaned, transformed, and loaded data from multiple sources (IGN, DFCI, CRIGE, BDIFF) into internal spatial databases.<br>
+            • Built and maintained a Web GIS application to visualize spatial data and support stakeholder decision-making.<br>
+            • Collaborated closely with multidisciplinary teams,  defined data needs, delivering GIS outputs, and support project objectives.<br>
+            • Prepared technical reports, GIS documentation, and user manuals for project teams and partners.
+        </p>
+    </div>
+
+    <div class="exp">
+        <div class="expbox">
+            <a href="https://www.inrae.fr/changement-climatique-risques/incendies-forets"
+               target="_blank" rel="noopener noreferrer">
+                <img class="company_logo" title="The official site of INRAE"
+                     src="images/inrae.png" alt="Company logo of INRAE">
+            </a><br>
+
+            <span class="exptitle">INRAE </span>
+            <span class="expnote"><br>
+                <strong style="color:rgba(234, 252, 156, 0.979)">
+                    Geospatial analyst (graduate Intern)
+                </strong><br>
+                march, 2021 - sept, 2021<br>
+                Aix-en-Provence, France
+            </span><br>
+        </div>
+
+        <p class="expdes">
+            • Improved a python-based workflows which automate satellite image processing, spatial analysis, and fire-mapping outputs.<br>
+            • Developed customized workflows and automated processes to improve efficiency in data processing and visualization.<br>
+            • Performed manual analysis of satellite images using GIS  and remote sensing techniques, mirroring the automated workflow to test and validate its accuracy.<br>
+            • Created an automation script for raster-to-vector format conversion and integrated the results into a spatial database.<br>
+            • Conducted ground truthing for  the verification of the efficiency of the automation tool<br>
+        </p>
+    </div>
+
+    <div class="exp">
+        <div class="expbox">
+            <a href="https://www.umrespace.org/"
+               target="_blank" rel="noopener noreferrer">
+                <img class="company_logo" title="Go to the page of the ESPACE UMR 7300 Institute"
+                     src="images/umr_espace.jpg" alt="Company logo of ESPACE (UMR 7300)">
+            </a><br>
+
+            <span class="exptitle title3">ESPACE (UMR 7300) </span>
+            <span class="expnote"><br>
+                <strong style="color:rgba(234, 252, 156, 0.979)">
+                    Remote sensing Analyst
+                </strong><br>
+                2020 - 2020<br>
+                Aix-en-Provence, France
+            </span><br>
+        </div>
+
+        <p class="expdes">
+            • Processed satellite imagery to generate land cover and land-use maps<br>
+            • Conducted spatial and statistical analyses to assess the impact of suburban development on runoff dynamics.<br>
+            • Developed hydrological models incorporating runoff coefficients, precipitation, and infiltration parameters.<br>
+            • Produced maps, analytical reports, and visual outputs to support environmental risk assessment.<br>
+        </p>
+    </div>
+
+    <div class="exp">
+        <div class="expbox">
+            <a href="https://www.inrae.fr/changement-climatique-risques/incendies-forets"
+               target="_blank" rel="noopener noreferrer">
+                <img class="company_logo" title="The official site of TPDC"
+                     src="images/TPDC.png" alt="Company logo of TPDC">
+            </a><br>
+
+            <span class="exptitle">TPDC </span>
+            <span class="expnote"><br>
+                <strong style="color:rgba(234, 252, 156, 0.979)">
+                    Geologist
+                </strong><br>
+                Jan - April, 2019<br>
+                Dar-es-Salaam, Tanzania
+            </span><br>
+        </div>
+
+        <p class="expdes">
+            • Conducted satellite gravity data acquisition, processing, and interpretation for structural analysis.<br>
+            • Performed structural mapping (faults, folds, lineaments) using GIS and remote sensing techniques.<br>
+            • Produced maps of structural mapping  of faults, folds, and lineament identification and analysis.<br>
+            • Produced maps of anomalous behavior, including Bouguer gravity anomalies.
+        </p>
+    </div>
+</div>
+
+
+    <!-- Work Experience END -->
+    
+    <!-- Portfolio Section -->
+    <div id="Portfolio">
+        <p class="myP myP4">Portfolio</p>
+    </div>
+
+    <!-- Portfolio Filter -->
+    <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="gis">Geospatial</button>
+        <button class="filter-btn" data-filter="data-analyst">Data Analysis</button>
+    </div>
+
+    <div class="projectgrid">
+        <div class="row row-cols-2 row-cols-md-5 g-4">
+            <!-- Project 1 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">Remote sensing</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2020</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project1.png" class="card-img-top" alt="Post fire runoff analysis">
+                    <div class="card-body">
+                        <h5 class="card-title">Post fire runoff analysis</h5>
+                        <p class="card-text">
+                            This study aims to develop mitigation strategies to address the impacts of post-fire conditions.
+                             The analysis is based on the wildfire event that occurred in the municipality of La Londe-les-Maures (Southern France),
+                              where 1,423 ha of forest were burned on 25 July 2017. Pre-fire and post-fire satellite imagery were acquired
+                               to assess changes in hydrological behavior, and infiltration and runoff were calculated for both conditions. 
+                               The results indicate a substantial decrease in infiltration capacity, with forested areas declining from 72 mm 
+                               under pre-fire conditions to 21.6 mm post-fire, and shrubland decreasing from 56 mm to 16.8 mm. Additionally, 
+                               runoff at selected critical locations increased, with an average increase of 0.8 m³.
+                        </p>
+
+                        <!-- The learn more section will be added later after the project details are finalized (on the section) -->
+                        <!-- 
+                        <div class="learnmore">
+                            <a href="projects/project1.html" target="_blank" rel="noopener noreferrer">
+                                <button class="shrink-border">Learn More</button>
+                            </a>
+                        </div> 
+                        -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">GIS analysis</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2019</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project2.png" class="card-img-top" alt="Wildfire Vulnerability Analysis in WUI Areas">
+                    <div class="card-body">
+                        <h5 class="card-title">Wildfire Vulnerability Analysis in WUI Areas</h5>
+                        <p class="card-text">
+                            This study assesses wildfire vulnerability in a municipality located in the Var Department (southeastern France), 
+                            by analyzing factors influencing fire ignition and propagation, including vegetation density, land-use patterns, 
+                            proximity of buildings and infrastructure to forested areas, and topographical conditions. The assessment follows 
+                            wildfire prevention regulations established by the French government in 2002 and adopted at the municipal level. 
+                            These regulations require brush clearing within 100 m of residential buildings located less than 200 m from forests, 
+                            as well as along communal roads (20 m), departmental roads (10 m), and power line corridors (10 m).
+                        </p>
+
+                        <!-- 
+                        <div class="learnmore">
+                            <a href="projects/project2.html" target="_blank" rel="noopener noreferrer">
+                                <button class="shrink-border">Learn More</button>
+                            </a>
+                        </div> 
+                        -->
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">Remote sensing & GIS</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2021</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project3.png" class="card-img-top" alt="Multi-temporal Burn Scar Mapping">
+                    <div class="card-body">
+                        <h5 class="card-title">Multi-temporal Burn Scar Mapping</h5>
+                        <p class="card-text">
+                            This study investigates multi-date and mixed approaches—combining multi-temporal satellite imagery and multiple spectral indices 
+                            to reduce false detections in burn scar mapping using the EMR5 tool. Conventional burn scar mapping within EMR5 relies on pixel-based analysis, 
+                            which is prone to misclassification due to spectral confusion and temporal variability. The primary objective of the tool is to generate 
+                            accurate burn scar maps and fire boundaries that are subsequently integrated into the CES-Incendie database for dissemination 
+                            through its operational platform. The results demonstrate that the mixed approach, followed by the multi-date approach using dNDVI feature layers, 
+                            significantly improves mapping accuracy. In the case studies of Nébian and Peypin, false detections were reduced by more than 90%. 
+                            Despite these improvements, challenges remain due to the inherent limitations of pixel-based methods, highlighting the need for further 
+                            methodological enhancements to improve burn scar delineation.
+
+                        <!-- 
+                            <div class="learnmore" target="_blank" rel="noopener noreferrer">
+                            <a href="projects/project3.html">
+                                <button class="shrink-border">Learn More</button>
+                            </a>
+                        </div> 
+                        -->
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <!-- Project 4 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">Remote sensing Analysis</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2019</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project4.jpg" class="card-img-top" alt="Mangrove and Forest Loss in Tanzania">
+                    <div class="card-body">
+                        <h5 class="card-title">Quantifying Mangrove and Forest Loss in Southeast Tanzania (2008–2018) Using Remote Sensing</h5>
+                        <p class="card-text">
+                            This study investigates land cover changes, with particular emphasis on the loss of mangrove and forest areas, 
+                            in the Lindi region of southeastern Tanzania between 2008 and 2018. Landsat satellite imagery from 2008 (Landsat 5) and 2018 (Landsat 8) 
+                            was used to generate land cover maps for both periods. The analysis employed unsupervised K-means classification followed by 
+                            post-classification corrections. Key methodological steps included image preprocessing, contrast stretching, color compositing, 
+                            and classification refinement to improve discrimination among stacked land cover classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">GIS & Remote sensing Analysis</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2020</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project5.png" class="card-img-top" alt="urban development impact on surface runoff">
+                    <div class="card-body">
+                        <h5 class="card-title">Urban Development Impact on Surface Runoff</h5>
+                        <p class="card-text">
+                            This study examines the impact of suburban development on surface runoff in the Brague catchment, southeastern France, 
+                            over the period 1990–2012. Land cover changes were analyzed using CORINE Land Cover data, which were reclassified into four major categories: 
+                            built areas, agricultural land, forest, and thin soil. Remote sensing, GIS techniques, and air photo interpretation were employed 
+                            to assess changes in surface imperviousness. Hydrological parameters, including runoff coefficients, precipitation, and infiltration, 
+                            were derived and integrated into a runoff estimation model using TerrSet software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">GIS & Remote sensing Analysis</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2020</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project6.png" class="card-img-top" alt="Mapping Harmful Algal Blooms with Sentinel-2">
+                    <div class="card-body">
+                        <h5 class="card-title">Remote Sensing Assessment of Harmful Algal Blooms Using Sentinel-2 Imagery</h5>
+                        <p class="card-text">
+                            This project investigates the use of Sentinel-2 satellite imagery for monitoring harmful algal blooms (HABs) in the Guadiana River basin 
+                            along the Spain–Portugal border. By applying different chlorophyll-a retrieval algorithms, the study evaluates the spatial extent and intensity 
+                            of HABs in a cost-effective and time-efficient manner, highlighting the potential of remote sensing as a complementary tool to traditional in situ monitoring methods.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100"></div>
+
+            <!-- Project 7 -->
+            <div class="col project-card" data-category="gis">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">Remote sensing</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">2018</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project7.png" class="card-img-top" alt="Satellite Gravimetric Analysis of Subsurface Structures">
+                    <div class="card-body">
+                        <h5 class="card-title">Satellite Gravimetric Analysis of Subsurface Structures in the Ain-Defla Region, Northern Algeria</h5>
+                        <p class="card-text">
+                            This study utilizes satellite-derived gravity data obtained from the TOPEX/POSEIDON (T/P) mission to investigate the subsurface 
+                            structure of the Ain-Defla region. Various processing and modeling techniques were applied, including the generation of gravimetric 
+                            maps and the estimation of the depth and orientation of major geological units.
+                            
+                            The resulting gravimetric maps reveal the presence of both positive and negative gravity anomalies, 
+                            indicating heterogeneous density distribution within the subsurface. The spatial variability and 
+                            orientations of these anomalies suggest a complex geological framework, 
+                            likely associated with structural features such as faults and dykes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="col project-card" data-category="data-analyst">
+                <h5 class="card-title" style="color: beige; font-size: 2.5rem">Data Analysis</h5>
+                <h5 class="card-title" style="color: aqua; font-size: 2rem">Mar 2023</h5>
+                <div class="card border-light text-light bg-dark">
+                    <img src="images/project8.png" class="card-img-top" alt="Individual tree detection with LiDAR">
+                    <div class="card-body">
+                        <h5 class="card-title">Temporal and spaitial comparison of the dynamics of the COVID-19 pandemic with the public health measures taken</h5>
+                        <p class="card-text">
+                            This project examines how COVID-19 outbreak dynamics vary across countries and how these patterns 
+                            relate to public health interventions. Using Johns Hopkins CSSE global time-series data, cumulative 
+                            national counts were aggregated and converted into daily incidence to analyze growth rates and epidemic peaks. 
+                            Trends were smoothed with a 7-day moving average and visualized on both linear and log scales. Cross-country 
+                            comparisons were performed using (i) timelines starting from the first reported deaths and (ii) trajectories 
+                            aligned at a common threshold (e.g., ≥100 deaths) to reduce bias from differing outbreak start dates. 
+                            Results reveal clear differences in acceleration and peak magnitude and suggest that earlier strict containment is 
+                            associated with flatter curves, although causal interpretation is limited by reporting and data quality issues.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contacts Section -->
+    <div id="Contacts" class="thankyou">
+        <p class="aboutMe thank" style="color: rgb(232, 226, 129)">
+            <a href="mailto:muhibu.kaneka@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+                <span>muhibu.kaneka@gmail.com</span>
+            </a>
+            <a href="tel:+33783513354" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-phone fa-xl"></i>
+                <span>+33 783 513 354</span>
+            </a>
+            <a href="https://www.linkedin.com/in/muhibu-kaneka/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin fa-xl"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.github.com/Muhibu" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github fa-xl"></i>
+                <span>GitHub</span>
+            </a>
+        </p>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal-overlay"></div>
+        <div class="project-modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-inner">
+                <img id="modalImage" src="" alt="Project Image" class="modal-image">
+                <div class="modal-text">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDate"></p>
+                    <p id="modalDescription"></p>
+                    <a id="modalLearnMore" href="#" class="modal-learn-more" target="_blank" rel="noopener noreferrer">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+
+        // Project Modal Functionality
+        $(document).ready(function() {
+            // Open modal when clicking on project card
+            $('.project-card').on('click', function() {
+                const image = $(this).find('.card-img-top').attr('src');
+                const title = $(this).find('.card-title').eq(1).text(); // Get second card-title (the main one)
+                const date = $(this).find('.card-title').eq(0).text(); // Get first card-title (date)
+                const description = $(this).find('.card-text').text();
+                const learnMoreLink = $(this).find('.shrink-border').attr('href') || '#';
+
+                $('#modalImage').attr('src', image);
+                $('#modalTitle').text(title);
+                $('#modalDate').text(date).css('color', 'rgba(234, 252, 156, 0.8)').css('font-style', 'italic');
+                $('#modalDescription').text(description);
+                $('#modalLearnMore').attr('href', learnMoreLink);
+
+                $('#projectModal').addClass('active');
+                $('body').css('overflow', 'hidden');
+            });
+
+            // Close modal
+            function closeModal() {
+                $('#projectModal').removeClass('active');
+                $('body').css('overflow', 'auto');
+            }
+
+            $('.modal-close').on('click', closeModal);
+            $('.project-modal-overlay').on('click', closeModal);
+
+            // Close on Escape key
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(50, 50, 60);
+}
+
+.containerr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
+  /* width: 100vw; */
+  text-align: center;
+}
+
+.learnmore{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button {
+  position: relative;
+  border: none;
+  font-size: 1.6rem;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 23px 33px;
+  border: 3px solid transparent;
+  
+}
+button:active {
+  transform: translateY(3px);
+}
+button::after, button::before {
+  border-radius: 3px;
+  
+}
+
+.shrink-border {
+  background: linear-gradient(135deg, rgba(234, 252, 156, 0.1) 0%, rgba(234, 252, 156, 0.05) 100%);
+  color: rgb(234, 252, 156);
+  align-items: center;
+  box-shadow: inset 0 0 0 2px rgb(234, 252, 156), 0 4px 15px rgba(234, 252, 156, 0.1);
+  border-radius: 6px !important;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+  letter-spacing: 1px;
+}
+.shrink-border:hover {
+  background: linear-gradient(135deg, rgb(234, 252, 156) 0%, rgba(234, 252, 156, 0.95) 100%);
+  color: #000;
+  box-shadow: inset 0 0 0 2px rgb(234, 252, 156), 0 8px 25px rgba(234, 252, 156, 0.3);
+  transform: translateY(-2px);
+}
+.shrink-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  transition: opacity 0.3s, border 0.3s;
+  border-radius: 6px;
+}
+.shrink-border:hover::before {
+  opacity: 0;
+}
+.shrink-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 3px solid transparent;
+  opacity: 0;
+  z-index: 3;
+  transform: scaleX(1.1) scaleY(1.3);
+  transition: transform 0.3s, opacity 0.3s;
+  border-radius: 6px;
+}
+.shrink-border:hover::after {
+  opacity: 0;
+  transform: scaleX(1) scaleY(1);
+}
+
+.material-bubble {
+  background-color: transparent;
+  color: #1b1b20;
+  border: none;
+  overflow: hidden;
+  box-shadow: none;
+}
+.material-bubble:hover {
+  color: #e6e6e6;
+}
+.material-bubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #1b1b20;
+  transition: opacity 0.3s, border 0.3s;
+}
+.material-bubble:hover::before {
+  opacity: 0;
+}
+.material-bubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: #494958;
+  border-color: transparent;
+  border-radius: 50%;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+.material-bubble:hover::after {
+  opacity: 1;
+  transform-origin: 100px 100px;
+  transform: scale(1) translate(-10px, -70px);
+}/*# sourceMappingURL=learnmorebtn.css.map */
